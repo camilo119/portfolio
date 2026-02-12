@@ -1,0 +1,14 @@
+C:\Users\petre\source\repos\cursera\testCopilot\bin\Debug\net10.0\testCopilot.exe
+C:\Users\petre\source\repos\cursera\testCopilot\bin\Debug\net10.0\testCopilot.deps.json
+C:\Users\petre\source\repos\cursera\testCopilot\bin\Debug\net10.0\testCopilot.runtimeconfig.json
+C:\Users\petre\source\repos\cursera\testCopilot\bin\Debug\net10.0\testCopilot.dll
+C:\Users\petre\source\repos\cursera\testCopilot\bin\Debug\net10.0\testCopilot.pdb
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\testCopilot.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\testCopilot.AssemblyInfoInputs.cache
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\testCopilot.AssemblyInfo.cs
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\testCopilot.csproj.CoreCompileInputs.cache
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\testCopilot.dll
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\refint\testCopilot.dll
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\testCopilot.pdb
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\testCopilot.genruntimeconfig.cache
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\ref\testCopilot.dll

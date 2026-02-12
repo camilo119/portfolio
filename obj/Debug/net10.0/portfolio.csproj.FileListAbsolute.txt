@@ -1,0 +1,14 @@
+C:\Users\petre\source\repos\cursera\testCopilot\bin\Debug\net10.0\portfolio.exe
+C:\Users\petre\source\repos\cursera\testCopilot\bin\Debug\net10.0\portfolio.deps.json
+C:\Users\petre\source\repos\cursera\testCopilot\bin\Debug\net10.0\portfolio.runtimeconfig.json
+C:\Users\petre\source\repos\cursera\testCopilot\bin\Debug\net10.0\portfolio.dll
+C:\Users\petre\source\repos\cursera\testCopilot\bin\Debug\net10.0\portfolio.pdb
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\portfolio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\portfolio.AssemblyInfoInputs.cache
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\portfolio.AssemblyInfo.cs
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\portfolio.csproj.CoreCompileInputs.cache
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\portfolio.dll
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\refint\portfolio.dll
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\portfolio.pdb
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\portfolio.genruntimeconfig.cache
+C:\Users\petre\source\repos\cursera\testCopilot\obj\Debug\net10.0\ref\portfolio.dll

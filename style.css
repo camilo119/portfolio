@@ -1,0 +1,358 @@
+:root {
+    --bg: #ffffff;
+    --text: #111827; /* high contrast dark text */
+    --muted: #6b7280;
+    --accent: #2563eb; /* blue focus color */
+    --accent-2: #7c3aed; /* purple */
+    --accent-3: #06b6d4; /* cyan */
+    --success: #059669; /* green */
+    --warning: #f97316; /* orange */
+    --card-bg: #f8fafc; /* very light card background */
+    --header-gradient-from: #0ea5e9; /* lighter blue */
+    --header-gradient-to: #7c3aed; /* purple */
+    --footer-bg: #0f172a; /* dark footer */
+    --footer-text: #e6eef8; /* light footer text */
+    --border: #e6e9ef;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.5;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+/* Skip link — visible on focus */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    background: #fff;
+    padding: 0.5rem 0.75rem;
+    border: 2px solid var(--accent);
+    z-index: 1000;
+}
+
+/* Visible focus styles for keyboard users */
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Screen-reader only helper */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Make inline SVG placeholders responsive */
+.projects-grid .project figure svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Simple container styling */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, var(--header-gradient-from), var(--header-gradient-to));
+    color: white;
+}
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+header h1 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Menu toggle: hidden by default on larger screens */
+#menu-toggle {
+    display: none; /* hide hamburger on laptops/desktops */
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: white;
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
+}
+
+/* Ensure primary nav is visible on larger screens */
+nav#primary-nav {
+    display: block;
+}
+
+/* Navigation */
+nav[role="navigation"] ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 150ms ease, transform 120ms ease;
+}
+nav a:hover,
+nav a:focus {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-1px);
+}
+
+/* Main layout spacing */
+main { padding: 2rem 0; }
+
+/* Article and sections */
+article#article {
+    margin-bottom: 1.5rem;
+}
+article#article h2 {
+    margin-top: 0;
+    color: var(--accent-2);
+}
+
+/* Projects filters */
+.projects-filters {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.75rem 0;
+}
+.projects-filters button {
+    background: transparent;
+    border: 1px solid var(--border);
+    padding: 0.4rem 0.6rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.projects-filters button[aria-pressed="true"] {
+    background: linear-gradient(90deg, var(--header-gradient-from), var(--header-gradient-to));
+    color: white;
+    border-color: transparent;
+}
+
+/* Projects grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1rem;
+}
+.project {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 6px 20px rgba(16,24,40,0.04);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.project:focus-within,
+.project:focus,
+.project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(16,24,40,0.08);
+}
+.project figure {
+    margin: 0 0 0.75rem 0;
+    border-radius: 6px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(37,99,235,0.05), rgba(124,58,237,0.03));
+}
+.project figcaption {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Project headings and lists */
+.project h3 {
+    margin: 0.25rem 0 0.5rem 0;
+    color: var(--accent);
+}
+.project ul {
+    margin: 0.5rem 0 0 1rem;
+}
+
+/* Links inside projects */
+.project a {
+    color: var(--accent-3);
+    text-decoration: none;
+    font-weight: 600;
+}
+.project a:hover,
+.project a:focus {
+    text-decoration: underline;
+}
+
+/* Aside */
+aside[aria-label="Related"] {
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    border-left: 3px solid var(--accent-2);
+    background: linear-gradient(180deg, rgba(124,58,237,0.02), transparent);
+}
+
+/* Contact form */
+form {
+    margin-top: 1rem;
+    background: transparent;
+}
+.form-row {
+    margin-bottom: 0.75rem;
+}
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: var(--text);
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.55rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: white;
+    color: var(--text);
+}
+input::placeholder,
+textarea::placeholder {
+    color: #9aa3b2;
+}
+input:focus,
+textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.08);
+    outline: none;
+}
+
+/* Buttons */
+button {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 0.85rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 130ms ease, transform 120ms ease;
+}
+button:hover,
+button:focus {
+    background: var(--accent-2);
+    transform: translateY(-1px);
+}
+
+/* Lightbox styles */
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+}
+.lightbox-dialog {
+    max-width: 92%;
+    max-height: 92%;
+    padding: 1rem;
+    outline: none;
+}
+.lightbox-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lightbox-media {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(2,6,23,0.6);
+}
+.lightbox-caption {
+    color: #fff;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+.lightbox-close {
+    margin-top: 0.6rem;
+    padding: 0.45rem 0.7rem;
+    border-radius: 8px;
+    border: none;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    padding: 1rem 0;
+    background: var(--footer-bg);
+    color: var(--footer-text);
+}
+footer a {
+    color: var(--accent-3);
+    text-decoration: none;
+}
+footer a:hover,
+footer a:focus {
+    text-decoration: underline;
+}
+
+/* Responsive layout: show hamburger and hide primary nav on small screens */
+@media (max-width: 760px) {
+    header .container { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    nav ul { flex-wrap: wrap; gap: 0.5rem; }
+    .container { padding: 0.75rem; }
+
+    /* Show the hamburger on small devices */
+    #menu-toggle { display: inline-flex; }
+
+    /* Hide primary nav by default on small screens; toggle adds .open */
+    nav#primary-nav { display: none; width: 100%; }
+    nav#primary-nav.open { display: block; }
+
+    /* Make mobile nav links vertical and full-width for easier tapping */
+    nav#primary-nav ul { display: flex; flex-direction: column; gap: 0.5rem; width: 100%; }
+    nav#primary-nav a { display: block; width: 100%; padding: 0.6rem; }
+}

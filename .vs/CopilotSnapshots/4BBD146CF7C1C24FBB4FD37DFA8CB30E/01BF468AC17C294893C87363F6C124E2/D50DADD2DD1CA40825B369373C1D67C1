@@ -1,0 +1,4 @@
+﻿# Copilot Instructions
+
+## General Guidelines
+- Prefer accessibility and SEO best practices: add ARIA roles and labels, skip links, visible focus styles, meta description, and accessible form controls.
